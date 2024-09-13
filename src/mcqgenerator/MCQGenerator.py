@@ -21,7 +21,7 @@ load_dotenv()
 api_key = os.getenv('GOOGLE_GENAI_API_KEY')
 
 # Initialize the LLM
-llm = GoogleGenerativeAI(model="models/text-bison-001", google_api_key=api_key)
+llm = GoogleGenerativeAI(model="models/gemini-1.5-flash", google_api_key=api_key)
 
 # Define the prompt template for quiz generation
 TEMPLATE = """

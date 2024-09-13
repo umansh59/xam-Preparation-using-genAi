@@ -1,0 +1,22 @@
+[2024-09-13 12:43:49,362] 65 langchain_core.language_models.llms -WARNING - Retrying langchain_google_genai.llms._completion_with_retry.<locals>._completion_with_retry in 4.0 seconds as it raised NotFound: 404 Requested entity was not found..
+[2024-09-13 12:43:58,505] 65 langchain_core.language_models.llms -WARNING - Retrying langchain_google_genai.llms._completion_with_retry.<locals>._completion_with_retry in 4.0 seconds as it raised NotFound: 404 Requested entity was not found..
+[2024-09-13 12:44:02,860] 65 langchain_core.language_models.llms -WARNING - Retrying langchain_google_genai.llms._completion_with_retry.<locals>._completion_with_retry in 4.0 seconds as it raised NotFound: 404 Requested entity was not found..
+[2024-09-13 12:44:07,226] 65 langchain_core.language_models.llms -WARNING - Retrying langchain_google_genai.llms._completion_with_retry.<locals>._completion_with_retry in 8.0 seconds as it raised NotFound: 404 Requested entity was not found..
+[2024-09-13 12:44:15,563] 65 langchain_core.language_models.llms -WARNING - Retrying langchain_google_genai.llms._completion_with_retry.<locals>._completion_with_retry in 10.0 seconds as it raised NotFound: 404 Requested entity was not found..
+[2024-09-13 12:46:34,455] 65 langchain_core.language_models.llms -WARNING - Retrying langchain_google_genai.llms._completion_with_retry.<locals>._completion_with_retry in 4.0 seconds as it raised InvalidArgument: 400 API key expired. Please renew the API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+].
+[2024-09-13 12:46:38,807] 65 langchain_core.language_models.llms -WARNING - Retrying langchain_google_genai.llms._completion_with_retry.<locals>._completion_with_retry in 4.0 seconds as it raised NotFound: 404 Requested entity was not found..
+[2024-09-13 12:46:43,129] 65 langchain_core.language_models.llms -WARNING - Retrying langchain_google_genai.llms._completion_with_retry.<locals>._completion_with_retry in 4.0 seconds as it raised InvalidArgument: 400 API key expired. Please renew the API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+].
+[2024-09-13 12:46:47,455] 65 langchain_core.language_models.llms -WARNING - Retrying langchain_google_genai.llms._completion_with_retry.<locals>._completion_with_retry in 8.0 seconds as it raised NotFound: 404 Requested entity was not found..
+[2024-09-13 12:46:55,786] 65 langchain_core.language_models.llms -WARNING - Retrying langchain_google_genai.llms._completion_with_retry.<locals>._completion_with_retry in 10.0 seconds as it raised NotFound: 404 Requested entity was not found..

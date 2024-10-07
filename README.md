@@ -1,37 +1,41 @@
-# 📚 MCQ Generator Application with Langchain
+
+# 📚 MCQ Generator Application with Langchain & Google Generative AI
 
 [![Python Version](https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9-blue)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/licenses/MIT)
 
 ## 📝 Description
 
-The MCQ Generator is a Python application that generates multiple-choice questions (MCQs) using the powerful Langchain library. It allows users to create customized MCQs based on input text, making it suitable for various subjects and complexity levels. The application provides a user-friendly interface built with Streamlit, enabling easy interaction and seamless MCQ generation.
+The MCQ Generator is a Python application that generates multiple-choice questions (MCQs) using the powerful Langchain library and Google Generative AI (Gemini 1.5). This application allows users to create customized MCQs based on input text, making it suitable for various subjects and complexity levels. The interface, built with Streamlit, provides a seamless way to generate and review MCQs.
 
 ## 🎯 Features
 
-- 📂 File Upload: Users can upload PDF or text files containing the input text for MCQ generation.
-- 🎛️ Customization: Specify the number of MCQs, subject, and complexity level of questions.
-- 🧠 Intelligent Generation: Leverages the Langchain library and OpenAI API for advanced natural language processing.
-- 📊 Review Generated MCQs: View the generated MCQs in a table format along with a review in the Streamlit app.
-- 📝 Logging: Application events are logged for easy tracking and debugging.
+- 📂 **File Upload**: Users can upload PDF or text files containing the input text for MCQ generation.
+- 🎛️ **Customization**: Specify the number of MCQs, subject, and complexity level of questions.
+- 🧠 **Advanced Natural Language Processing**: Leverages the Langchain library and Google Generative AI API for intelligent question generation.
+- 📊 **Review Generated MCQs**: View and evaluate the generated MCQs in a table format within the Streamlit app.
+- 📝 **Logging**: Logs application events to track errors and usage.
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
 - Python 3.7 or higher
-- OpenAI API key
+- Google Generative AI API key
 
 ### Installation
 
 1. Clone the repository:
    ```
-   git clone https://github.com/AkshaySatasiya/mcqgen.git
+   git clone https://github.com/umansh59/xam-Preparation-using-genAi
    cd mcqgen
    ```
 
 2. Create a virtual environment (optional but recommended):
-   
+   ```
+   python3 -m venv env
+   source env/bin/activate  # On Windows: `env\Scripts\activate`
+   ```
 
 3. Install the required dependencies:
    ```
@@ -39,11 +43,11 @@ The MCQ Generator is a Python application that generates multiple-choice questio
    ```
 
 4. Set up the API key:
-   - Obtain an API key from OpenAI.
+   - Obtain an API key from Google Generative AI.
    - Create a `.env` file in the project root directory.
    - Add the following line to the `.env` file:
      ```
-     OPENAI_API_KEY=your_api_key_here
+     GOOGLE_GENAI_API_KEY=your_api_key_here
      ```
 
 ## 🏃‍♂️ Usage
@@ -53,40 +57,25 @@ The MCQ Generator is a Python application that generates multiple-choice questio
    streamlit run StreamlitAPP.py
    ```
 
-2. Access the application in your web browser at `http://localhost:8501`.
+2. Open your browser and navigate to `http://localhost:8501`.
 
-3. Upload a PDF or text file containing the input text for MCQ generation.
+3. Upload a PDF or text file containing the content for MCQ generation.
 
-4. Specify the desired number of MCQs, subject, and complexity level.
+4. Set the desired number of MCQs, subject, and tone.
 
 5. Click the "Create MCQs" button to generate the MCQs.
 
-6. Review the generated MCQs in the Streamlit app.
+6. Review the MCQs in the Streamlit app and see the evaluation analysis.
 
 ## 📁 File Descriptions
 
-- `StreamlitAPP.py`: Main script containing the Streamlit application for the MCQ Generator.
-- `mcqgenerator.py`: Script handling the generation and evaluation of MCQs using Langchain.
-- `logger.py`: Logging setup to record application events.
-- `utils.py`: Utility functions for reading files and extracting table data from the generated MCQs.
-- `requirements.txt`: List of required Python packages for the application.
+- `StreamlitAPP.py`: Main script that runs the Streamlit app for the MCQ Generator.
+- `mcqgenerator.py`: Script for generating and evaluating MCQs using Langchain and Google Generative AI.
+- `utils.py`: Contains utility functions to read files and process the generated MCQs.
+- `requirements.txt`: Lists all the required Python packages.
 
-## 📝 Logging
 
-Application events are logged in the `logs` directory. Each log file is timestamped for easy reference and debugging.
 
-## 🙌 Acknowledgments
+This application uses the [Langchain](https://github.com/hwchase17/langchain) library and [Google Generative AI API](https://cloud.google.com/ai/generative-ai) for natural language processing. We are grateful to the developers of these tools.
 
-The MCQ Generator application utilizes the [Langchain](https://github.com/hwchase17/langchain) library and [OpenAI API](https://openai.com/) for natural language processing. We express our gratitude to the developers and contributors of these amazing tools.
 
-## 🤝 Contribution
-
-Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request. Make sure to follow the [contribution guidelines](CONTRIBUTING.md) when contributing to this project.
-
-## 📄 License
-
-This project is open-sourced under the [MIT License](LICENSE).
-
----
-
-Feel free to reach out for any queries or support regarding this project. Happy coding! 🚀

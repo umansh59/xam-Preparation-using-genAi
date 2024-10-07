@@ -26,20 +26,21 @@ def read_file(file):
 
 def get_table_data(quiz_str):
     try:
-        # Extract JSON from markdown code block
-        start_index = quiz_str.find('```json') + len('```json')
-        end_index = quiz_str.find('```', start_index)
+        # Extract the JSON from the string by locating `{}` directly rather than searching for markdown syntax
+        start_index = quiz_str.find('{')
+        end_index = quiz_str.rfind('}') + 1
+
         if start_index == -1 or end_index == -1:
-            raise ValueError("The input string does not contain a valid JSON code block.")
-        
-        # Extract and clean JSON string
+            raise ValueError("The input string does not contain a valid JSON object.")
+
+        # Extract and clean the JSON string
         json_str = quiz_str[start_index:end_index].strip()
         print(f"Extracted JSON string: {json_str}")
 
         if not json_str:
             raise ValueError("The extracted JSON string is empty.")
         
-        # Convert the quiz string to dict
+        # Convert the JSON string to a Python dictionary
         quiz_dict = json.loads(json_str)
         quiz_table_data = []
 
@@ -51,7 +52,6 @@ def get_table_data(quiz_str):
                     f"{option} -> {option_value}" for option, option_value in value.get('options', {}).items()
                 ]
             )
-
             correct = value.get('correct', 'N/A')
             quiz_table_data.append({'MCQ': mcq, 'Choices': options, 'Correct': correct})
         

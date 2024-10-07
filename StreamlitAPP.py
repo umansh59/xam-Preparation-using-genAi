@@ -15,7 +15,7 @@ load_dotenv()
 try:
     with open('Response.json', 'r', encoding='utf-8') as file:
         RESPONSE_JSON = json.load(file)
-        print("Loaded RESPONSE_JSON:", RESPONSE_JSON)  # Debugging: Print the loaded JSON
+        print("Loaded RESPONSE_JSON:", RESPONSE_JSON)  
 except Exception as e:
     print(f"Error loading JSON file: {e}")
     RESPONSE_JSON = {}
@@ -41,9 +41,8 @@ with st.form('user_inputs'):
         with st.spinner('Loading...'):
             try:
                 text = read_file(uploaded_file)
-                print("File content:", text)  # Debugging: Print the file content
+                print("File content:", text)  
 
-                # Count tokens and the cost of API call
                 with get_openai_callback() as cb:
                     response = generate_evaluate_chain({
                         'text': text,
